@@ -84,7 +84,7 @@ import reception2 from '../assets/gallery/reception2.jpg'
 import ext from '../assets/gallery/NICT30Ext.jpg'
 import lab1 from '../assets/gallery/NICT30lab1.jpg'
 import lab22 from '../assets/gallery/NICT30lab2.jpg'
-import lobby from '../assets/gallery/NICT30lobby.jpg'
+import lobby from '../assets/gallery/NICT30loby.jpg'
 import recep from '../assets/gallery/NICT30reception.jpg'
 
 export const galleryItems = [
