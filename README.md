@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NICT Chandigarh — Computer Education Institute Website
 
 A modern, premium, responsive, SEO-optimized website built with **React + Vite**, **Tailwind CSS**, and **Framer Motion**.
@@ -76,3 +77,6 @@ The production build is output to `dist/`.
 
 - `npm install` requires internet access, which wasn't available in the sandbox this was built in — the code has been syntax-checked and import-resolution-checked file by file, but hasn't been run through a live `vite build`. Run `npm install && npm run build` locally to do a final build verification.
 - Update the canonical URLs in each page's `<Seo />` call once the site has a real production domain.
+=======
+# NICTCHD
+>>>>>>> 444ae8bd573415d0f97e0794fe3e96ac75150486
