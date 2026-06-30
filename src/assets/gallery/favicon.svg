@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800"
+     height="240"
+     viewBox="0 0 800 240">
+
+  <rect width="800" height="170" fill="#e1261c"/>
+  <rect y="170" width="800" height="70" fill="#2b2678"/>
+
+  <text x="35"
+        y="135"
+        font-family="Arial Black, Impact, sans-serif"
+        font-size="170"
+        font-weight="900"
+        fill="white"
+        letter-spacing="-8">
+    nict
+  </text>
+
+  <text x="18"
+        y="220"
+        font-family="Arial Black, Impact, sans-serif"
+        font-size="52"
+        font-weight="700"
+        fill="white"
+        letter-spacing="2">
+    COMPUTER EDUCATION
+  </text>
+
+</svg>

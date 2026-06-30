@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  @apply bg-surface text-ink dark:bg-surface-dark dark:text-ink-inverse;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+::selection {
+  background-color: rgba(225, 38, 28, 0.25);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #E1261C, #2B2678);
+  border-radius: 10px;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #F2A93B;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/40 dark:border-white/10;
+  }
+
+  .glass-strong {
+    @apply bg-white/80 dark:bg-primary-900/60 backdrop-blur-2xl border border-white/60 dark:border-white/10;
+  }
+
+  .section-padding {
+    @apply px-5 sm:px-8 lg:px-12 xl:px-20;
+  }
+
+  .container-section {
+    @apply max-w-7xl mx-auto section-padding;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display font-semibold text-white
+      bg-gradient-to-r from-primary-500 to-accent shadow-premium
+      transition-all duration-300 hover:shadow-glow-primary hover:-translate-y-0.5 active:translate-y-0
+      focus-visible:outline-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display font-semibold
+      text-primary-700 dark:text-white border-2 border-primary-200 dark:border-white/20 bg-white/70 dark:bg-white/5
+      backdrop-blur transition-all duration-300 hover:border-primary-500 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline-orange {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 font-display font-semibold text-white
+      bg-gradient-to-r from-secondary-500 to-secondary-700 shadow-premium-orange
+      transition-all duration-300 hover:shadow-[0_0_40px_rgba(43,38,120,0.45)] hover:-translate-y-0.5;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-display font-semibold uppercase tracking-[0.18em]
+      text-primary-600 dark:text-accent-light;
+  }
+
+  .heading-xl {
+    @apply font-display font-bold tracking-tight text-ink dark:text-white;
+  }
+
+  .card-base {
+    @apply rounded-3xl border border-primary-100/70 dark:border-white/10 bg-white dark:bg-primary-900/40
+      shadow-glass transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-2 hover:shadow-premium hover:border-primary-300/60;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 via-accent to-secondary-500 bg-clip-text text-transparent;
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(rgba(225, 38, 28, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(225, 38, 28, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+}
