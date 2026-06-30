@@ -22,7 +22,7 @@ export default function Faculty() {
                   {person.img ? (
                     <img src={person.img} alt={person.name} className="h-full w-full rounded-full object-cover" />
                   ) : (
-                    <person className="img" className="text-primary-500 dark:text-accent-light" size={36}>
+                    <person className="img text-primary-500 dark:text-accent-light" size={36}>
                       {person.name.charAt(4)}
                     </person>
                   )}
